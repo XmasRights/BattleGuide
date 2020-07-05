@@ -13,7 +13,29 @@ struct BattleCanvas: View {
 
     var body: some View {
         VStack {
+			Text("Weak To")
+
+            HStack {
+                Text("4x")
+                    .padding()
+                    .overlay(
+                        Circle()
+                            .stroke(Color.green)
+                    )
+
+                VStack {
+                    TypeLabel(type: .fighting)
+                        .frame(width: 120, height: 80)
+                    TypeLabel(type: .normal)
+                        .frame(width: 120, height: 80)
+                    TypeLabel(type: .fire)
+                        .frame(width: 120, height: 80)
+                }
+            }
+
             Spacer()
+
+			Divider()
 
             HStack(alignment: .center) {
                 ForEach(typeStore.selectedTypes) { type in
@@ -24,7 +46,6 @@ struct BattleCanvas: View {
                         .matchedGeometryEffect(id: type.id, in: animation)
                 }
             }
-            .background(Color.white)
         }
     }
 }
