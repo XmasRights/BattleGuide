@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var selected = Set<Type.ID>()
+    @ObservedObject private var typeStore = TypeStore()
     @Namespace var animation
 
     var body: some View {
         VStack {
-            BattleCanvas(selected: $selected, animation: animation)
-            TypeBanner(selected: $selected, animation: animation)
+            BattleCanvas(typeStore: typeStore, animation: animation)
+            TypeBanner(typeStore: typeStore, animation: animation)
         }
     }
 }

@@ -17,6 +17,7 @@
 		4B01F38424B14C7700043588 /* TypeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B01F38124B14C7700043588 /* TypeLabel.swift */; };
 		4B01F38524B14C7700043588 /* TypeBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B01F38224B14C7700043588 /* TypeBanner.swift */; };
 		4B01F38824B14CC800043588 /* BattleCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B01F38724B14CC800043588 /* BattleCanvas.swift */; };
+		4B01F38A24B14D5700043588 /* TypeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B01F38924B14D5700043588 /* TypeStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		4B01F38124B14C7700043588 /* TypeLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeLabel.swift; sourceTree = "<group>"; };
 		4B01F38224B14C7700043588 /* TypeBanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeBanner.swift; sourceTree = "<group>"; };
 		4B01F38724B14CC800043588 /* BattleCanvas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleCanvas.swift; sourceTree = "<group>"; };
+		4B01F38924B14D5700043588 /* TypeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 			children = (
 				4B01F38624B14CC000043588 /* Battle */,
 				4B01F37F24B14C5700043588 /* Type */,
+				4B01F38924B14D5700043588 /* TypeStore.swift */,
 				4B01F35424B14C1100043588 /* BattleGuideApp.swift */,
 				4B01F35624B14C1100043588 /* ContentView.swift */,
 				4B01F35824B14C1200043588 /* Assets.xcassets */,
@@ -289,6 +292,7 @@
 			files = (
 				4B01F38424B14C7700043588 /* TypeLabel.swift in Sources */,
 				4B01F38324B14C7700043588 /* Type.swift in Sources */,
+				4B01F38A24B14D5700043588 /* TypeStore.swift in Sources */,
 				4B01F35724B14C1100043588 /* ContentView.swift in Sources */,
 				4B01F38824B14CC800043588 /* BattleCanvas.swift in Sources */,
 				4B01F35524B14C1100043588 /* BattleGuideApp.swift in Sources */,
