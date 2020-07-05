@@ -8,111 +8,69 @@
 import UIKit
 import SwiftUI
 
-struct Type: Identifiable {
+
+
+//struct Type: Identifiable {
+//    var id: String {
+//        name
+//    }
+//
+//    let name: String
+//    let color: Color
+//}
+
+enum Type: String, Identifiable, CaseIterable {
+    case normal
+    case fire
+    case water
+    case electric
+    case grass
+    case ice
+    case fighting
+    case poison
+    case ground
+    case flying
+    case psychic
+    case bug
+    case rock
+    case ghost
+    case dragon
+    case dark
+    case steel
+    case fairy
+
     var id: String {
-        name
+        self.rawValue
     }
 
-    let name: String
-    let color: Color
+    var name: String {
+        self.rawValue.capitalized
+    }
 }
 
-extension Type {
-    static let all: [Self] = [
-        .normal, .fire, .water, .electric, .grass, .ice, .fighting, .poison,
-        .ground, .flying, .psychic, .bug, .rock, .ghost, .dragon, .dark,
-        .steel, .fairy
-    ]
-}
+// MARK: Colours
 
 extension Type {
-    static let normal = Self.init(
-        name: "Normal",
-        color: .gray
-    )
-
-    static let fire = Self.init(
-        name: "Fire",
-        color: .red
-    )
-
-    static let water = Self.init(
-        name: "Water",
-        color: .blue
-    )
-
-    static let electric = Self.init(
-        name: "Electric",
-        color: .yellow
-    )
-
-    static let grass = Self.init(
-        name: "Grass",
-        color: .green
-    )
-
-    static let ice = Self.init(
-        name: "Ice",
-        color: Color(UIColor.systemTeal)
-    )
-
-    static let fighting = Self.init(
-        name: "Fighting",
-        color: Color(UIColor.brown)
-    )
-
-    static let poison = Self.init(
-        name: "Poison",
-        color: .purple
-    )
-
-    static let ground = Self.init(
-        name: "Ground",
-        color: Color(red: 221 / 255.0, green: 187 / 255.0, blue: 85 / 255.0)
-    )
-
-    static let flying = Self.init(
-        name: "Flying",
-        color: Color(red: 136 / 255.0, green: 153 / 255.0, blue: 1.0)
-    )
-
-    static let psychic = Self.init(
-        name: "Psychic",
-        color: Color(red: 1.0, green: 85 / 255.0, blue: 153 / 255.0)
-    )
-
-    static let bug = Self.init(
-        name: "Bug",
-        color: Color(red: 170 / 255.0, green: 187 / 255.0, blue: 33 / 255.0)
-    )
-
-    static let rock = Self.init(
-        name: "Rock",
-        color: Color(red: 187 / 255.0, green: 170 / 255.0, blue: 102 / 255.0)
-    )
-
-    static let ghost = Self.init(
-        name: "Ghost",
-        color: Color(red: 102 / 255.0, green: 102 / 255.0, blue: 187 / 255.0)
-    )
-
-    static let dragon = Self.init(
-        name: "Dragon",
-        color: Color(red: 177 / 255.0, green: 101 / 255.0, blue: 236 / 255.0)
-    )
-
-    static let dark = Self.init(
-        name: "Dark",
-        color: Color(red: 119 / 255.0, green: 85 / 255.0, blue: 86 / 255.0)
-    )
-
-    static let steel = Self.init(
-        name: "Steel",
-        color: Color(red: 158 / 255.0, green: 158 / 255.0, blue: 172 / 255.0)
-    )
-
-    static let fairy = Self.init(
-        name: "Fairy",
-        color: Color(red: 238 / 255.0, green: 153 / 255.0, blue: 238 / 255.0)
-    )
+    var color: Color {
+        switch self {
+            case .normal:   return .gray
+            case .fire: 	return .red
+            case .water: 	return .blue
+            case .electric: return .yellow
+            case .grass:    return .green
+            case .ice:      return Color(UIColor.systemTeal)
+            case .fighting: return Color(UIColor.brown)
+            case .poison:   return .purple
+            case .ground:   return Color(red: 221 / 255.0, green: 187 / 255.0, blue: 85 / 255.0)
+            case .flying:   return Color(red: 136 / 255.0, green: 153 / 255.0, blue: 1.0)
+            case .psychic:  return Color(red: 1.0, green: 85 / 255.0, blue: 153 / 255.0)
+            case .bug:      return Color(red: 170 / 255.0, green: 187 / 255.0, blue: 33 / 255.0)
+            case .rock:     return Color(red: 187 / 255.0, green: 170 / 255.0, blue: 102 / 255.0)
+            case .ghost:    return Color(red: 102 / 255.0, green: 102 / 255.0, blue: 187 / 255.0)
+            case .dragon:   return Color(red: 177 / 255.0, green: 101 / 255.0, blue: 236 / 255.0)
+            case .dark:     return Color(red: 119 / 255.0, green: 85 / 255.0, blue: 86 / 255.0)
+            case .steel:    return Color(red: 158 / 255.0, green: 158 / 255.0, blue: 172 / 255.0)
+            case .fairy:    return Color(red: 238 / 255.0, green: 153 / 255.0, blue: 238 / 255.0)
+        }
+    }
 }

@@ -105,14 +105,14 @@
 		4B01F35324B14C1100043588 /* BattleGuide */ = {
 			isa = PBXGroup;
 			children = (
+				4B01F35824B14C1200043588 /* Assets.xcassets */,
 				4B01F38624B14CC000043588 /* Battle */,
-				4B01F37F24B14C5700043588 /* Type */,
-				4B01F38924B14D5700043588 /* TypeStore.swift */,
 				4B01F35424B14C1100043588 /* BattleGuideApp.swift */,
 				4B01F35624B14C1100043588 /* ContentView.swift */,
-				4B01F35824B14C1200043588 /* Assets.xcassets */,
 				4B01F35D24B14C1200043588 /* Info.plist */,
 				4B01F35A24B14C1200043588 /* Preview Content */,
+				4B01F37F24B14C5700043588 /* Type */,
+				4B01F38924B14D5700043588 /* TypeStore.swift */,
 			);
 			path = BattleGuide;
 			sourceTree = "<group>";

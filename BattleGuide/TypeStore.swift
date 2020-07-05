@@ -10,13 +10,13 @@ import SwiftUI
 final class TypeStore: ObservableObject {
     private var selected = [Type.ID]() {
         didSet {
-            selectedTypes = Type.all.filter { selected.contains($0.id) }
-            unselectedTypes = Type.all.filter { !selected.contains($0.id) }
+            selectedTypes = Type.allCases.filter { selected.contains($0.id) }
+            unselectedTypes = Type.allCases.filter { !selected.contains($0.id) }
         }
     }
 
     @Published var selectedTypes = [Type]()
-    @Published var unselectedTypes = Type.all
+    @Published var unselectedTypes = Type.allCases
 
     func select(type: Type) {
         withAnimation {
