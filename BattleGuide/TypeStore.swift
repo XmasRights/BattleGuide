@@ -19,7 +19,7 @@ final class TypeStore: ObservableObject {
     @Published var unselectedTypes = Type.all
 
     func select(type: Type) {
-        withAnimation(.spring()) {
+        withAnimation {
             selected.append(type.id)
 
             if selected.count > 2 {
@@ -29,7 +29,7 @@ final class TypeStore: ObservableObject {
     }
 
     func deselect(type: Type) {
-        withAnimation(.spring()) {
+        withAnimation {
             selected.removeAll(where: { $0 == type.id })
         }
     }

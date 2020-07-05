@@ -15,7 +15,7 @@ struct TypeBanner: View {
         VStack {
             Divider()
 
-            LazyVGrid(columns: [GridItem(.adaptive(minimum: 120))], spacing: 2) {
+            LazyVGrid(columns: [GridItem(.adaptive(minimum: 80))], spacing: 2) {
                 ForEach(typeStore.unselectedTypes) { type in
                     TypeLabel(type: type)
                         .opacity(0.7)

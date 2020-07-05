@@ -14,7 +14,11 @@ struct ContentView: View {
     var body: some View {
         VStack {
             BattleCanvas(typeStore: typeStore, animation: animation)
-            TypeBanner(typeStore: typeStore, animation: animation)
+
+            if typeStore.selectedTypes.count < 2 {
+                TypeBanner(typeStore: typeStore, animation: animation)
+                    .transition(.move(edge: .bottom))
+            }
         }
     }
 }

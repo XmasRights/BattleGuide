@@ -17,7 +17,7 @@ struct TypeLabel: View {
                 .fill(colour)
 
             Text(text)
-                .font(.headline)
+                .font(.body)
                 .padding()
         }
     }

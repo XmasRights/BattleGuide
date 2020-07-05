@@ -12,40 +12,23 @@ struct BattleCanvas: View {
     let animation: Namespace.ID
 
     var body: some View {
-        VStack {
-			Text("Weak To")
+        NavigationView {
+            VStack {
+                Spacer()
 
-            HStack {
-                Text("4x")
-                    .padding()
-                    .overlay(
-                        Circle()
-                            .stroke(Color.green)
-                    )
+                Divider()
 
-                VStack {
-                    TypeLabel(type: .fighting)
-                        .frame(width: 120, height: 80)
-                    TypeLabel(type: .normal)
-                        .frame(width: 120, height: 80)
-                    TypeLabel(type: .fire)
-                        .frame(width: 120, height: 80)
+                HStack(alignment: .center) {
+                    ForEach(typeStore.selectedTypes) { type in
+                        TypeLabel(type: type)
+                            .frame(width: 120, height: 80)
+                            .padding()
+                            .onTapGesture { typeStore.deselect(type: type) }
+                            .matchedGeometryEffect(id: type.id, in: animation)
+                    }
                 }
             }
-
-            Spacer()
-
-			Divider()
-
-            HStack(alignment: .center) {
-                ForEach(typeStore.selectedTypes) { type in
-                    TypeLabel(type: type)
-                        .frame(width: 120, height: 80)
-                        .padding()
-                        .onTapGesture { typeStore.deselect(type: type) }
-                        .matchedGeometryEffect(id: type.id, in: animation)
-                }
-            }
+            .navigationTitle("Battle Guide")
         }
     }
 }
