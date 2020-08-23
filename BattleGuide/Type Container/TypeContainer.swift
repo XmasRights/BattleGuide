@@ -18,7 +18,9 @@ struct TypeContainer: View {
             HStack {
                 Circle()
                     .stroke(strokeColor)
-                    .overlay(Text(title))
+                    .overlay(
+                        Text(title)
+                    )
                     .frame(
                         width: proxy.size.height,
                         height: proxy.size.height

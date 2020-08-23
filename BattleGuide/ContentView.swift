@@ -9,10 +9,19 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        GuideView(
-            attackProvider: MockAttackProvider(),
-            defenceProvider: MockDefenceProvider()
-        )
+        VStack() {
+            ScrollView {
+                GuideView(
+                    attackProvider: MockAttackProvider(),
+                    defenceProvider: MockDefenceProvider()
+                )
+
+                Spacer()
+            }
+
+            Divider()
+            SelectionPanel()
+        }
     }
 }
 

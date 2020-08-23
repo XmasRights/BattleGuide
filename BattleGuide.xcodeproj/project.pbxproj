@@ -19,6 +19,7 @@
 		4B83F7FD24F2DB5E002B2674 /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B83F7FC24F2DB5E002B2674 /* GuideView.swift */; };
 		4B83F80024F2DE61002B2674 /* Effectiveness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B83F7FF24F2DE61002B2674 /* Effectiveness.swift */; };
 		4B83F80224F2DF12002B2674 /* GuideViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B83F80124F2DF12002B2674 /* GuideViewProvider.swift */; };
+		4B97C9E624F2F31D00F529A5 /* SelectionPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B97C9E524F2F31D00F529A5 /* SelectionPanel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		4B83F7FC24F2DB5E002B2674 /* GuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
 		4B83F7FF24F2DE61002B2674 /* Effectiveness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Effectiveness.swift; sourceTree = "<group>"; };
 		4B83F80124F2DF12002B2674 /* GuideViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideViewProvider.swift; sourceTree = "<group>"; };
+		4B97C9E524F2F31D00F529A5 /* SelectionPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionPanel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		4B01F35324B14C1100043588 /* BattleGuide */ = {
 			isa = PBXGroup;
 			children = (
+				4B97C9E424F2F30F00F529A5 /* Selection Panel */,
 				4B83F7FE24F2DE50002B2674 /* Guide View */,
 				4B83F7F924F2CC27002B2674 /* Type Container */,
 				4B01F37F24B14C5700043588 /* Types */,
@@ -170,6 +173,14 @@
 				4B83F80124F2DF12002B2674 /* GuideViewProvider.swift */,
 			);
 			path = "Guide View";
+			sourceTree = "<group>";
+		};
+		4B97C9E424F2F30F00F529A5 /* Selection Panel */ = {
+			isa = PBXGroup;
+			children = (
+				4B97C9E524F2F31D00F529A5 /* SelectionPanel.swift */,
+			);
+			path = "Selection Panel";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B83F7F724F2C912002B2674 /* TypeLabel.swift in Sources */,
+				4B97C9E624F2F31D00F529A5 /* SelectionPanel.swift in Sources */,
 				4B01F38324B14C7700043588 /* Type.swift in Sources */,
 				4B01F35724B14C1100043588 /* ContentView.swift in Sources */,
 				4B83F7FD24F2DB5E002B2674 /* GuideView.swift in Sources */,

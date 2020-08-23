@@ -37,6 +37,7 @@ struct GuideView: View {
                     contents: provider.types(for: eft),
                     strokeColor: .gray
                 )
+                .frame(height: 40)
             }
         }
     }

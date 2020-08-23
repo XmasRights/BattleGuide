@@ -51,12 +51,12 @@ struct TypeLabel_Previews: PreviewProvider {
 
             TypeLabel(type: .grass, style: .expanded)
                 .preferredColorScheme(.dark)
-                .previewLayout(.sizeThatFits)
+                .previewLayout(.fixed(width: 200, height: 100))
                 .previewDisplayName("Dark Expanded")
 
             TypeLabel(type: .grass, style: .expanded)
                 .preferredColorScheme(.light)
-                .previewLayout(.sizeThatFits)
+                .previewLayout(.fixed(width: 200, height: 100))
                 .previewDisplayName("Light Expanded")
         }
     }
