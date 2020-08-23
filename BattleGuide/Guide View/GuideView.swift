@@ -8,51 +8,35 @@
 import SwiftUI
 
 struct GuideView: View {
-    let provider: GuideViewProvider
+    let attackProvider: GuideViewProvider?
+    let defenceProvider: GuideViewProvider?
 
-    private struct Data: Hashable {
-        let title: String
-        let types: [Type]
-    }
-
-    private var attackData: [Data] {
-        Effectiveness.allCases.compactMap { effectiveness in
-            // TODO
-            return Data(title: effectiveness.title, types: [])
-        }
-    }
-
-    private var defenceData: [Data] {
-        Effectiveness.allCases.compactMap { effectiveness in
-            // TODO
-            return Data(title: effectiveness.title, types: [])
-        }
-    }
     var body: some View {
-        ScrollView {
-            VStack {
-                section(title: "Attacking ⚔️", data: attackData)
-                section(title: "Defending 🛡", data: defenceData)
+        VStack(spacing: 40) {
+            if let provider = attackProvider {
+                section(title: "Attacking ⚔️", provider: provider)
             }
+
+            if let provider = defenceProvider {
+                section(title: "Defending 🛡", provider: provider)
+            }
+            Spacer()
         }
+        .padding()
     }
 
-    private func section(title: String, data: [Data]) -> some View {
+    private func section(title: String, provider: GuideViewProvider) -> some View {
         VStack {
-            if !data.isEmpty {
-                Text(title)
-                    .font(.title)
+            Text(title)
+                .font(.title)
 
-                List {
-                    ForEach(data, id: \.self) { entry in
-                        TypeContainer(
-                            title: entry.title,
-                            typeLabelStyle: .compact,
-                            contents: entry.types,
-                            strokeColor: .gray)
-                            .frame(minHeight: 60)
-                    }
-                }
+            ForEach(Effectiveness.allCases, id: \.self) { eft in
+                TypeContainer(
+                    title: eft.title,
+                    typeLabelStyle: .compact,
+                    contents: provider.types(for: eft),
+                    strokeColor: .gray
+                )
             }
         }
     }
@@ -60,12 +44,23 @@ struct GuideView: View {
 
 struct GuideView_Previews: PreviewProvider {
     static var previews: some View {
-        GuideView(provider: MockProvider())
+        GuideView(
+            attackProvider: MockAttackProvider(),
+            defenceProvider: MockDefenceProvider()
+        )
     }
 }
 
-private struct MockProvider: GuideViewProvider {
+struct MockAttackProvider: GuideViewProvider {
     func types(for effectiveness: Effectiveness) -> [Type] {
-        return [.fire, .electric]
+        guard effectiveness != .normal else { return [] }
+        return [.fire, .electric, .grass]
+    }
+}
+
+struct MockDefenceProvider: GuideViewProvider {
+    func types(for effectiveness: Effectiveness) -> [Type] {
+        guard effectiveness != .normal else { return [] }
+        return [.ground, .fairy]
     }
 }

@@ -9,7 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello Mimikyu")
+        GuideView(
+            attackProvider: MockAttackProvider(),
+            defenceProvider: MockDefenceProvider()
+        )
     }
 }
 
