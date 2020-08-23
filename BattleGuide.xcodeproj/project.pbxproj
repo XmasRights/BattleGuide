@@ -17,6 +17,8 @@
 		4B83F7F724F2C912002B2674 /* TypeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B83F7F624F2C912002B2674 /* TypeLabel.swift */; };
 		4B83F7FB24F2CC3B002B2674 /* TypeContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B83F7FA24F2CC3B002B2674 /* TypeContainer.swift */; };
 		4B83F7FD24F2DB5E002B2674 /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B83F7FC24F2DB5E002B2674 /* GuideView.swift */; };
+		4B83F80024F2DE61002B2674 /* Effectiveness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B83F7FF24F2DE61002B2674 /* Effectiveness.swift */; };
+		4B83F80224F2DF12002B2674 /* GuideViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B83F80124F2DF12002B2674 /* GuideViewProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		4B83F7F624F2C912002B2674 /* TypeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeLabel.swift; sourceTree = "<group>"; };
 		4B83F7FA24F2CC3B002B2674 /* TypeContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeContainer.swift; sourceTree = "<group>"; };
 		4B83F7FC24F2DB5E002B2674 /* GuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
+		4B83F7FF24F2DE61002B2674 /* Effectiveness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Effectiveness.swift; sourceTree = "<group>"; };
+		4B83F80124F2DF12002B2674 /* GuideViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideViewProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 		4B01F35324B14C1100043588 /* BattleGuide */ = {
 			isa = PBXGroup;
 			children = (
+				4B83F7FE24F2DE50002B2674 /* Guide View */,
 				4B83F7F924F2CC27002B2674 /* Type Container */,
 				4B01F37F24B14C5700043588 /* Types */,
 				4B01F35824B14C1200043588 /* Assets.xcassets */,
@@ -110,7 +115,6 @@
 				4B01F35624B14C1100043588 /* ContentView.swift */,
 				4B01F35D24B14C1200043588 /* Info.plist */,
 				4B01F35A24B14C1200043588 /* Preview Content */,
-				4B83F7FC24F2DB5E002B2674 /* GuideView.swift */,
 			);
 			path = BattleGuide;
 			sourceTree = "<group>";
@@ -156,6 +160,16 @@
 				4B83F7FA24F2CC3B002B2674 /* TypeContainer.swift */,
 			);
 			path = "Type Container";
+			sourceTree = "<group>";
+		};
+		4B83F7FE24F2DE50002B2674 /* Guide View */ = {
+			isa = PBXGroup;
+			children = (
+				4B83F7FC24F2DB5E002B2674 /* GuideView.swift */,
+				4B83F7FF24F2DE61002B2674 /* Effectiveness.swift */,
+				4B83F80124F2DF12002B2674 /* GuideViewProvider.swift */,
+			);
+			path = "Guide View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,6 +306,8 @@
 				4B01F35724B14C1100043588 /* ContentView.swift in Sources */,
 				4B83F7FD24F2DB5E002B2674 /* GuideView.swift in Sources */,
 				4B01F35524B14C1100043588 /* BattleGuideApp.swift in Sources */,
+				4B83F80024F2DE61002B2674 /* Effectiveness.swift in Sources */,
+				4B83F80224F2DF12002B2674 /* GuideViewProvider.swift in Sources */,
 				4B83F7FB24F2CC3B002B2674 /* TypeContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

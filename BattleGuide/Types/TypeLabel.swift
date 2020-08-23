@@ -19,6 +19,7 @@ struct TypeLabel: View {
 
             if style == .expanded {
                 Text(type.name)
+                    .font(.body)
                     .padding()
                     .background(
                         Capsule().fill(type.color)
