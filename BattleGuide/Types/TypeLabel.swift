@@ -18,7 +18,7 @@ struct TypeLabel: View {
             }
 
             if style == .expanded {
-                Text(self.type.name)
+                Text(type.name)
                     .padding()
                     .background(
                         Capsule().fill(type.color)
@@ -41,25 +41,21 @@ struct TypeLabel_Previews: PreviewProvider {
             TypeLabel(type: .ghost, style: .compact)
                 .preferredColorScheme(.dark)
                 .previewLayout(.fixed(width: 100, height: 100))
-                .padding()
                 .previewDisplayName("Dark Compact")
 
             TypeLabel(type: .ghost, style: .compact)
                 .preferredColorScheme(.light)
                 .previewLayout(.fixed(width: 100, height: 100))
-                .padding()
                 .previewDisplayName("Light Compact")
 
             TypeLabel(type: .grass, style: .expanded)
                 .preferredColorScheme(.dark)
                 .previewLayout(.sizeThatFits)
-                .padding()
                 .previewDisplayName("Dark Expanded")
 
             TypeLabel(type: .grass, style: .expanded)
                 .preferredColorScheme(.light)
                 .previewLayout(.sizeThatFits)
-                .padding()
                 .previewDisplayName("Light Expanded")
         }
     }
