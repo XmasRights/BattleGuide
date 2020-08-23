@@ -24,6 +24,7 @@ struct TypeContainer: View {
                         height: proxy.size.height
                     )
 
+                // TODO: Figure out how to make this into a cool grid
                 HStack(spacing: 2) {
                     ForEach(contents) {
                         TypeLabel(type: $0, style: typeLabelStyle)
@@ -31,6 +32,8 @@ struct TypeContainer: View {
                     }
                 }
                 .padding(.trailing, proxy.size.height)
+
+                Spacer()
             }
         }
         .background(
