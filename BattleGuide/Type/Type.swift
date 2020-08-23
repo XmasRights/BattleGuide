@@ -8,17 +8,6 @@
 import UIKit
 import SwiftUI
 
-
-
-//struct Type: Identifiable {
-//    var id: String {
-//        name
-//    }
-//
-//    let name: String
-//    let color: Color
-//}
-
 enum Type: String, Identifiable, CaseIterable {
     case normal
     case fire
