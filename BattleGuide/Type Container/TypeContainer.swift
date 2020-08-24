@@ -30,10 +30,8 @@ struct TypeContainer: View {
                 HStack(spacing: 2) {
                     ForEach(contents) {
                         TypeLabel(type: $0, style: typeLabelStyle)
-                            .frame(maxHeight: proxy.size.height - 12)
                     }
                 }
-                .padding(.trailing, proxy.size.height)
 
                 Spacer()
             }
@@ -69,7 +67,7 @@ struct TypeContainer_Previews: PreviewProvider {
 
             TypeContainer(title: "2x", typeLabelStyle: .expanded, contents: contents, strokeColor: .gray)
                 .preferredColorScheme(.light)
-                .previewLayout(.fixed(width: 400, height: 60))
+                .previewLayout(.fixed(width: 400, height: 100))
                 .previewDisplayName("Light Expanded")
         }
     }

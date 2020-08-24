@@ -10,6 +10,7 @@ import SwiftUI
 struct GuideView: View {
     let attackProvider: GuideViewProvider?
     let defenceProvider: GuideViewProvider?
+    let typeLabelStyle: TypeLabel.Style
 
     var body: some View {
         VStack(spacing: 40) {
@@ -33,7 +34,7 @@ struct GuideView: View {
             ForEach(Effectiveness.allCases, id: \.self) { eft in
                 TypeContainer(
                     title: eft.title,
-                    typeLabelStyle: .compact,
+                    typeLabelStyle: typeLabelStyle,
                     contents: provider.types(for: eft),
                     strokeColor: .gray
                 )
@@ -45,10 +46,19 @@ struct GuideView: View {
 
 struct GuideView_Previews: PreviewProvider {
     static var previews: some View {
-        GuideView(
-            attackProvider: MockAttackProvider(),
-            defenceProvider: MockDefenceProvider()
-        )
+        Group {
+            GuideView(
+                attackProvider: MockAttackProvider(),
+                defenceProvider: MockDefenceProvider(),
+                typeLabelStyle: .expanded
+            )
+
+            GuideView(
+                attackProvider: MockAttackProvider(),
+                defenceProvider: MockDefenceProvider(),
+                typeLabelStyle: .compact
+            )
+        }
     }
 }
 

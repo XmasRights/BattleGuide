@@ -36,27 +36,36 @@ extension TypeLabel {
     }
 }
 
+extension TypeLabel.Style {
+    mutating func toggle() {
+        switch self {
+        case .compact:  self = .expanded
+        case .expanded: self = .compact
+        }
+    }
+}
+
 struct TypeLabel_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             TypeLabel(type: .ghost, style: .compact)
                 .preferredColorScheme(.dark)
-                .previewLayout(.fixed(width: 100, height: 100))
+                .previewLayout(.sizeThatFits)
                 .previewDisplayName("Dark Compact")
 
             TypeLabel(type: .ghost, style: .compact)
                 .preferredColorScheme(.light)
-                .previewLayout(.fixed(width: 100, height: 100))
+                .previewLayout(.sizeThatFits)
                 .previewDisplayName("Light Compact")
 
             TypeLabel(type: .grass, style: .expanded)
                 .preferredColorScheme(.dark)
-                .previewLayout(.fixed(width: 200, height: 100))
+                .previewLayout(.sizeThatFits)
                 .previewDisplayName("Dark Expanded")
 
             TypeLabel(type: .grass, style: .expanded)
                 .preferredColorScheme(.light)
-                .previewLayout(.fixed(width: 200, height: 100))
+                .previewLayout(.sizeThatFits)
                 .previewDisplayName("Light Expanded")
         }
     }
